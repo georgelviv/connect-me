@@ -1,0 +1,29 @@
+{
+  "name": "connect-me",
+  "version": "0.0.1",
+  "description": "Connect RaspberryPI to connect with UI",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/georgelviv/connect-me.git"
+  },
+  "keywords": [
+    "raspberrypi",
+    "wifi"
+  ],
+  "author": "Yura Shkoropad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/georgelviv/connect-me/issues"
+  },
+  "homepage": "https://github.com/georgelviv/connect-me#readme",
+  "dependencies": {
+    "module-alias": "^2.1.0"
+  },
+  "_moduleAliases": {
+    "wifi": "src/wifi"
+  }
+}
