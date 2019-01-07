@@ -1,6 +1,9 @@
-const { scan } = require('wifi');
+const { scan, getNetworksConfiguration } = require('wifi');
 
-scan()
+// scan()
+//   .then(console.log)
+
+getNetworksConfiguration()
   .then((res) => {
     console.log(res);
   });

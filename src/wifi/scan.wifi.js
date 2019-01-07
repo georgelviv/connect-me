@@ -81,9 +81,10 @@ function checkChannel(line) {
 
 function checkFrequency(line) {
   const frequencyRegEx = /(Frequency:)(\d+.?\d+ Ghz)/i;
-  if (line.match(frequencyRegEx)) {
+  const match = line.match(frequencyRegEx);
+  if (match) {
     return {
-      frequency: line.match(frequencyRegEx)[2]
+      frequency: match[2]
     };
   } else {
     return {}
@@ -103,8 +104,9 @@ function checkEncryption(line) {
 
 function checkQuality(line) {
   const qualityRegEx = /(Quality=)(\d+\/\d+)/i;
-  if (line.match(qualityRegEx)) {
-    const quality = line.match(qualityRegEx)[2];
+  const match = line.match(qualityRegEx);
+  if (match) {
+    const quality = match[2];
     const [quotient, divisor] = quality.split('/');
     return {
       quality: quotient / divisor
@@ -116,9 +118,10 @@ function checkQuality(line) {
 
 function checkSignalLevel(line) {
   const signalRegEx = /(Signal level=)(-?\d+ dBm)/i;
-  if (line.match(signalRegEx)) {
+  const match = line.match(signalRegEx);
+  if (match) {
     return {
-      signal: line.match(signalRegEx)[2]
+      signal: match[2]
     }
   } else {
     return {};
