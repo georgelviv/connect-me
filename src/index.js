@@ -1,9 +1,13 @@
-const { scan, getNetworksConfiguration } = require('wifi');
+const { scan, getNetworksConfiguration, setNetworksConfiguration } = require('wifi');
+
+const configs = [
+  { ssid: 'Google.comV2', hasPsk: true, psk: 'AJT11may1962ajt' }
+];
 
 // scan()
 //   .then(console.log)
 
-getNetworksConfiguration()
+setNetworksConfiguration(configs)
   .then((res) => {
-    console.log(res);
+    console.log('Updated');
   });

@@ -2,7 +2,6 @@ const { exec } = require('child_process');
 
 const scan = () => {
   return new Promise((resolve, reject) => {
-    console.log('Scanning...')
     exec('sudo iwlist wlan0 scan', (error, stdout) => {
       if (error) {
         reject(error);
